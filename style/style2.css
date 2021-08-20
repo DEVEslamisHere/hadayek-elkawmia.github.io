@@ -1,0 +1,63 @@
+/*css document*/
+
+.box {
+    background-color: #a1e0ba;
+}
+
+.box2 {
+    height: auto;
+    width: 500px;
+    background-color: #673ab79c;
+}
+
+.box3 {
+    height: 335px;
+    width: 650px;
+    background-color: #673ab79c;
+}
+
+.box4 {
+    height: 200px;
+    width: 200px;
+    background-color: #00000000;
+    position: absolute;
+    animation: moving 3s infinite;
+}
+
+.boxn {
+    height: 300px;
+    width: 635px;
+    background-color: aqua;
+}
+
+
+@keyframes moving {
+    0% {
+        top: 15px;
+        bottom: 10px;
+    }
+    20% {
+        top: 50px;
+        bottom: 10px;
+    }
+    40% {
+        top: 25px;
+        bottom: 10px;
+    }
+    50% {
+        top: 75px;
+        bottom: 10px;
+    }
+    60% {
+        top: 60px;
+        bottom: 10px;
+    }
+    80% {
+        top: 100px;
+        bottom: 10px;
+    }
+    100% {
+        top: 15px;
+        bottom: 10px;
+    }
+}

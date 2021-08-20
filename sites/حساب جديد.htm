@@ -1,0 +1,74 @@
+﻿<!--Doctype HTML-->
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>حساب جديد</title>
+</head>
+
+<body dir="rtl">
+    <style>
+        t1 {
+            color: red
+        }
+        
+        t2 {
+            color: blue
+        }
+        
+        t3 {
+            color: yellow
+        }
+        
+        t4 {
+            color: orange
+        }
+    </style>
+    <center>
+        <div class="box2">
+            <form name="form1" action="الصفحة الرئيسية.htm">
+                <font size="5" color="red">الموقع يقوم بتسجيل دخولك إفتراضيا، لذلك يجب عليك عمل حساب جديد في كل مرة تدخل إلي الموقع</font><br><br>
+                <t1>حساب جديد</t1><br><br><br>
+                <b>الإسم:</b><input type="text" name="username" placeholder="Guest#26F4" size="29" disabled><br><br>
+                <b>الإيميل:</b><input type="Email" name="Email" placeholder="أكتب حسابك هنا" size="28" required><br><br>
+                <b>كلمة المرور:</b><input type="password" name="password1" placeholder="أكتب كلمة مرورك" size="24" maxlength="16" required><br><br>
+                <b>أكد كلمة المرور:</b><input type="password" name="password2" placeholder="أكد كلمة مرورك" size="21" maxlength="15" required><br><br>
+                <b>رقم التليفون:</b><input type="text" name="number1" placeholder="أكتب رقم تليفونك" size="24" maxlength="11" required><br><br>
+                <b>الرقم القومى:</b><input type="text" name="number2" placeholder="أكتب رقمك القومى" size="23" maxlength="14" required><br><br><br> تذكرنى:
+                <input type="checkbox" disabled><br> الصف:
+                <br> الأول الإعدادى<input type="radio" name="a" required>الثاني الإعدادى<input type="radio" name="a" required>الثالث الإعدادى<input type="radio" name="a" required><br><br>
+                <input type="submit" value="إنشاء حساب" onclick="return f1();">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" value="إعادة">
+            </form>
+        </div>
+    </center>
+    <script>
+        function f1() {
+            if (form1.password1.value !== form1.password2.value) {
+                alert("لا يوجد تطابق بين كلمات المرور")
+                return false;
+            }
+            if (form1.password1.value.lenght < 8) {
+                alert("من فضلك اكتب كلمة مرور أطول من 8 احرف")
+                return false;
+            }
+            if (isNaN(form1.number1.value)) {
+                alert("أكتب أرقاما فى خانة رقم الهاتف")
+                return false;
+            }
+            if (isNaN(form1.number2.value)) {
+                alert("أكتب أرقاما فى خانة الرقم القومي")
+                return false;
+            }
+            if (form1.number1.value.lenght < 11) {
+                alert("من فضلك رقم الهاتف مكون من 11 رقم وليس أقل")
+                return false;
+            }
+            if (form1.number2.value.lenght < 14) {
+                alert("الرقم القومي مكون من 14 وليس أقل")
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>
